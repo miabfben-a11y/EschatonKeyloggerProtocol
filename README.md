@@ -1,6 +1,4 @@
-# Note: Ceci est une représentation conceptuelle du flux logique, 
-
-# non un code fonctionnel prêt à l'emploi pour usage malveillant.
+# Note: Ceci est une représentation conceptuelle du flux logique
 
 
 
